@@ -1,0 +1,49 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 3vmin 0;
+}
+.introText {
+  font-weight: 300;
+  font-size: 1.125rem;
+  line-height: 1.7;
+}
+
+.introTextContainer {
+  padding: 3vmin 10vmin 0;
+}
+
+.titleText {
+  margin-bottom: 15px;
+  padding-left: 10vmin;
+  font-weight: 500;
+  font-size: 26px;
+  color: #d22238;
+  line-height: 1;
+}
+
+.headImage {
+  overflow: hidden;
+}
+
+.titleImg {
+  height: 100%;
+  object-fit: cover;
+}
+
+.readMore {
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+@media only screen and (max-width: 414px) {
+  .headImage {
+    overflow: hidden;
+    height: 265px;
+  }
+  .introText {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+}

@@ -1,0 +1,62 @@
+.subscribeForm {
+  width: 60%;
+}
+
+.subText {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.formContainer {
+  height: auto;
+  padding: 6vmin 10vmin;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f5f4f4;
+  background-image: url('../assets/flames.svg');
+}
+
+input[type='email'] {
+  padding: 14px 10px;
+  font-size: 1.125rem;
+  flex-grow: 1;
+  font-family: 'Raleway';
+  border: none;
+  font-weight: 300;
+}
+
+input:focus {
+  /* border: 1px solid red; */
+  outline: none !important;
+}
+
+button {
+  font-family: 'Raleway';
+  font-size: 1.125rem;
+  background-color: #949494;
+  border: none;
+  color: white;
+  padding: 0 1rem;
+  /* font-weight: 500; */
+  text-decoration: none;
+  margin: 0;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #d22238;
+}
+
+form {
+  display: flex;
+}
+
+@media only screen and (max-width: 414px) {
+  .subscribeForm {
+    width: auto;
+  }
+}

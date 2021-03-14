@@ -1,0 +1,13 @@
+.pics_in_a_row {
+  display: flex;
+}
+
+.pics_in_a_row > div:not(:last-child) {
+  margin-right: 2%;
+}
+
+@media only screen and (max-width: 414px) {
+  .imgHide {
+    display: none;
+  }
+}

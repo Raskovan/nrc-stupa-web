@@ -15,7 +15,8 @@ function Footer(props) {
     >
       <p className={classes.caption}>
         NORTHEAST RETREAT CENTER <br />
-        1026 East Hill Road Middleburgh, NY 12122
+        1026 East Hill Road, Middleburgh, NY 12122
+        <br /> <a href="mailto:nrc@diamondway.org">nrc@diamondway.org</a>
       </p>
       <p className={classes.caption}>
         DWB-NYC is part of <a href="https://diamondway.org/">DWB-USA</a>, a

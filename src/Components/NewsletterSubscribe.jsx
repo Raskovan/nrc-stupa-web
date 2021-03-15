@@ -7,7 +7,7 @@ function NewsletterSubscribe() {
     <div className={classes.container} style={{ marginBottom: '1rem' }}>
       <div className={classesSub.formContainer}>
         <p className={classesSub.subText}>
-          Subscribe to our newsletter to receive updates on our progress
+          Subscribe to our newsletter to receive updates on the progress
         </p>
         <div className={classesSub.subscribeForm}>
           <form

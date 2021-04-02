@@ -3,7 +3,7 @@ import classes from '../styles/BackgroundVideo.module.css'
 import NrcLogo from '../assets/stupa-logo.png'
 
 function BackgroundVideo() {
-  const videoSource = './nrc_1.mp4'
+  const videoSource = './nrc_video.mp4'
   return (
     <div>
       <video autoPlay loop muted className={classes.Video} playsInline>

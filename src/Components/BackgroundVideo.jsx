@@ -4,33 +4,17 @@ import NrcLogo from '../assets/stupa-logo.png'
 
 function BackgroundVideo() {
   const videoSource = './nrc_video.mp4'
-  const videoParentRef = React.useRef()
+  // const videoParentRef = React.useRef()
   return (
     <div>
       <div
-        ref={videoParentRef}
+        // ref={videoParentRef}
         dangerouslySetInnerHTML={{
           __html: `
-        <video
-          loop
-          muted
-          autoplay
-          playsInline
-          preload="metadata"
-          style="object-fit: cover; width: 100vw; height: 100vh; top: 0; left: 0;"
-        >
-        <source src="${videoSource}" type="video/mp4" />
-        </video>`
+              <video autoPlay loop muted playsInline class="${classes.Video}" src="${videoSource}"/>`
         }}
       />
-      {/* <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        preload="metadata"
-        className={classes.Video}
-      >
+      {/* <video autoPlay loop muted={true} playsInline className={classes.Video}>
         <source src={videoSource} type="video/mp4" />
         Your browser does not support the video tag.
       </video> */}

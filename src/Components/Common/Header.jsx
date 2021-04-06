@@ -7,7 +7,7 @@ function Header(props) {
   const { backgroundWhite } = props
 
   const listenScrollEvent = e => {
-    if (window.scrollY > window.innerHeight) {
+    if (window.scrollY > window.innerHeight - 80) {
       setHeaderScrolled(true)
     } else {
       setHeaderScrolled(false)

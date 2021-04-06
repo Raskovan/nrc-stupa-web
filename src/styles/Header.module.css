@@ -1,4 +1,5 @@
 .header_container {
+  transition: background-color 0.5s ease;
   position: fixed;
   background: transparent;
   width: 100%;
@@ -7,7 +8,7 @@
 }
 
 .header_container_white {
-  transition: background-color 0.8s ease;
+  transition: background-color 0.5s ease;
   position: fixed;
   background: white;
   width: 100%;

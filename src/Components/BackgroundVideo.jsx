@@ -1,9 +1,10 @@
-import React from 'react'
-import classes from '../styles/BackgroundVideo.module.css'
-import NrcLogo from '../assets/stupa-logo.png'
+import React from "react";
+import classes from "../styles/BackgroundVideo.module.css";
+import NrcLogo from "../assets/stupa-logo.png";
 
 function BackgroundVideo() {
-  const videoSource = './nrc_video.mp4'
+  const VideoPoster = "./nrc_video_poster.jpg";
+  const videoSource = "./nrc_video.mp4";
   // const videoParentRef = React.useRef()
   return (
     <div>
@@ -11,7 +12,18 @@ function BackgroundVideo() {
         // ref={videoParentRef}
         dangerouslySetInnerHTML={{
           __html: `
-              <video autoPlay loop muted playsInline class="${classes.Video}" src="${videoSource}"/>`
+        <video
+          controls
+          autoplay
+          playsinline
+          loop
+          muted
+          preload="auto"
+          class="${classes.Video}"
+          poster="${VideoPoster}"
+        >
+          <source src="${videoSource}" type="video/mp4"/>
+        </video>`
         }}
       />
       {/* <video autoPlay loop muted={true} playsInline className={classes.Video}>
@@ -26,7 +38,7 @@ function BackgroundVideo() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default BackgroundVideo
+export default BackgroundVideo;

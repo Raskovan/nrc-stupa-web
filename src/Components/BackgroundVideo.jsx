@@ -1,6 +1,7 @@
 import React from "react";
 import classes from "../styles/BackgroundVideo.module.css";
-import NrcLogo from "../assets/stupa-logo.png";
+import NrcLogo from "../assets/NRCStupa_Logo_red_black.png";
+import NrcLogoTxt from "../assets/NRCStupa_Logo_red_txt.png";
 
 function BackgroundVideo() {
   const VideoPoster = "./nrc_video_poster.jpg";
@@ -31,11 +32,14 @@ function BackgroundVideo() {
         Your browser does not support the video tag.
       </video> */}
       <div className={classes.Content}>
-        <img src={NrcLogo} width="120px" alt="NRC logo" />
-        <div className={classes.SubContent}>
+        <img src={NrcLogo} alt="NRC logo" style={{ position: "absolute" }} />
+        <figure className={classes.hoverRotate}>
+          <img src={NrcLogoTxt} alt="NRC logo txt" className={classes.LogoTxt} id="logo" />
+        </figure>
+        {/* <div className={classes.SubContent}>
           <h1>Stupa Of Complete Victory</h1>
           <p>Northeast Retreat Center, USA</p>
-        </div>
+        </div> */}
       </div>
     </div>
   );

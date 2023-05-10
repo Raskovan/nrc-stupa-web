@@ -30,6 +30,10 @@
   padding: 0;
 }
 
+.Content img {
+  width: 380px;
+}
+
 .SubContent {
   text-align: center;
   padding: 10px;
@@ -78,6 +82,69 @@
 
 @media only screen and (max-width: 414px) {
   .Content {
-    height: 100%;
+    height: 90%;
+  }
+
+  .Content img {
+    width: 280px;
+  }
+}
+
+.LogoTxt {
+  transform-origin: 50% 50%;
+  animation-name: spinSouth, wiggleSouth;
+  animation-delay: 0s, 1s;
+  animation-duration: 1s, 1s;
+  animation-iteration-count: 1, 4;
+  transform: rotate(45deg);
+}
+
+.hoverRotate {
+  z-index: 10000;
+}
+
+.hoverRotate:hover .LogoTxt {
+  transform-origin: 50% 50%;
+  animation-name: spinNorth;
+  animation-delay: 0s, 1s;
+  animation-duration: 1s, 1s;
+  animation-iteration-count: 1, 4;
+  transform: rotate(-45deg);
+}
+
+/* Spin south Animation */
+@keyframes spinSouth {
+  0% {
+    transform: rotate(-90deg);
+  }
+
+  100% {
+    transform: rotate(45deg);
+  }
+}
+
+/* Spin south Animation */
+@keyframes spinNorth {
+  0% {
+    transform: rotate(90deg);
+  }
+
+  100% {
+    transform: rotate(-45deg);
+  }
+}
+
+/* Wiggle Animation */
+@keyframes wiggleSouth {
+  0% {
+    transform: rotate(45deg);
+  }
+
+  50% {
+    transform: rotate(40deg);
+  }
+
+  100% {
+    transform: rotate(45deg);
   }
 }

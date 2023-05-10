@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "../styles/BackgroundVideo.module.css";
-import NrcLogo from "../assets/NRCStupa_Logo_red_black.png";
-import NrcLogoTxt from "../assets/NRCStupa_Logo_red_txt.png";
+import NrcLogo from "../assets/NRCStupa_Logo_white.png";
+import NrcLogoTxt from "../assets/NRCStupa_Logo_white_txt.png";
 
 function BackgroundVideo() {
   const VideoPoster = "./nrc_video_poster.jpg";

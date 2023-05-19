@@ -1,9 +1,9 @@
 import { createClient } from "contentful";
 
 export const client = createClient({
-  space: process.env.REACT_CONTENTFUL_SPACE,
+  space: process.env.REACT_APP_CONTENTFUL_SPACE,
   environment: "master", // defaults to 'master' if not set
-  accessToken: process.env.REACT_CONTENTFUL_ACCESS_TOKEN
+  accessToken: process.env.REACT_APP_CONTENTFUL_ACCESS_TOKEN
 });
 
 export const getEntries = async contentType => {

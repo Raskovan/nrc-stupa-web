@@ -23,7 +23,7 @@
 .content_container {
   height: 57px;
   /* border-bottom: solid 1px #d22238; */
-  padding: 0 10vmin;
+  padding: 0 8vmin;
   position: relative;
   display: flex;
 }
@@ -33,7 +33,7 @@
   position: absolute;
   top: 56px;
   left: 0;
-  right: calc(10vmin - -165px);
+  right: calc(8vmin - -165px);
 }
 
 .rightBorder {
@@ -41,7 +41,7 @@
   position: absolute;
   top: 56px;
   right: 0;
-  width: calc(10vmin - 5px);
+  width: calc(8vmin - 5px);
 }
 
 @media only screen and (max-width: 414px) {

@@ -1,37 +1,39 @@
-import React from 'react'
-import classes from '../styles/Intro.module.css'
-import StupaNepal from '../assets/stupa-nepal.jpg'
-import { Link } from 'react-router-dom'
+import React from "react";
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import classes from "../styles/Intro.module.css";
+import { BLOCKS } from "@contentful/rich-text-types";
+import classesDW from "../styles/DWStupas.module.css";
 
-function AboutStupas() {
+const renderOptions = {
+  renderNode: {
+    [BLOCKS.EMBEDDED_ENTRY]: (node, children) => {
+      const images = node.data.target.fields.images;
+      return (
+        <div className={classesDW.pics_in_a_row}>
+          {images.map((image, index) => (
+            <div key={index} style={{ flex: index === 0 ? "0.794" : "1.5" }}>
+              <img key={index} src={"https://" + image?.fields?.file?.url} width="100%" alt={image?.fields?.title} />{" "}
+            </div>
+          ))}
+        </div>
+      );
+    }
+  }
+};
+
+function AboutStupas({ data }) {
+  if (!Object.keys(data).length) return null;
+  const imageUrl = "https://" + data?.images[0]?.fields?.file?.url;
+  console.log(data.introText);
   return (
     <div className={classes.container}>
-      <p className={classes.titleText}>ABOUT STUPAS</p>
+      <p className={classes.titleText}>{data.title}</p>
       <div className={classes.headImage}>
-        <img
-          src={StupaNepal}
-          className={classes.titleImg}
-          width="100%"
-          alt="Stupa in Nepal"
-        />
+        <img src={imageUrl} className={classes.titleImg} width="100%" alt={data?.images[0]?.fields?.title} />
       </div>
-      <div className={classes.introTextContainer}>
-        <p>
-          Stupas in the West mean the strengthened transmission of Asian
-          Buddhism coming to the West and that the Dharma can grow here. Their
-          symbolism is multifaceted: a stupa represents the mind of the Buddha,
-          it also refers to the community of practitioners, the Sangha.
-          Generally, it is said that the spiritual influence of stupas is so
-          great that those who revere them, help during its construction, or
-          those who live in the vicinity, experience its positive effect as a
-          source of peace, happiness, and prosperity.{' '}
-          <Link to="/stupas" className={classes.readMore}>
-            Read more about stupas
-          </Link>
-        </p>
-      </div>
+      <div className={classes.introTextContainer}>{documentToReactComponents(data.introText, renderOptions)}</div>
     </div>
-  )
+  );
 }
 
-export default AboutStupas
+export default AboutStupas;

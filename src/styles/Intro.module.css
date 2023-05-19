@@ -3,6 +3,7 @@
   flex-direction: column;
   padding: 0 0 3vmin 0;
 }
+
 .introText {
   font-weight: 300;
   font-size: 1.125rem;
@@ -10,12 +11,14 @@
 }
 
 .introTextContainer {
-  padding: 3vmin 10vmin 0;
+  padding: 3vmin 8vmin 0;
 }
+
+
 
 .titleText {
   margin-bottom: 15px;
-  padding-left: 10vmin;
+  padding-left: 8vmin;
   font-weight: 500;
   font-size: 26px;
   color: #d22238;
@@ -42,6 +45,7 @@
     overflow: hidden;
     height: 265px;
   }
+
   .introText {
     font-size: 1rem;
     line-height: 1.6;

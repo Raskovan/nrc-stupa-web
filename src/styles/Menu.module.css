@@ -1,15 +1,16 @@
 .menuContainer {
-  /* display: flex;
-  flex-direction: row; */
+  display: flex;
+  justify-content: space-between;
   top: 40px;
   position: fixed;
   z-index: 100;
-  margin: 0 8vw;
-  /* border-bottom: 1px solid #d22238; */
+  margin: 0 8vmin;
+  width: 10%;
 }
+
 .textContainer {
   position: fixed;
-  width: 20%;
+  width: 10%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -31,17 +32,23 @@
 .activeMenuItem {
   color: #d22238;
 }
+
 .activeMenuItem:hover {
   color: #d22238;
 }
 
 @media only screen and (max-width: 414px) {
   .menuContainer {
+    display: flex;
+    justify-content: space-between;
     top: 77px;
     height: 18px;
-    width: 86%;
+    width: 84%;
+    padding: 0 8vw;
+    margin: 0;
     background-color: white;
   }
+
   .textContainer {
     width: 86%;
   }

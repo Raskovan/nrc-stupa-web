@@ -1,12 +1,12 @@
 import React from "react";
 import classes from "../../styles/Details.module.css";
-import OleHannahStupa from "../../assets/OleHannahStupa.jpg";
-import Kbl from "../../assets/kbl.jpg";
+// import OleHannahStupa from "../../assets/OleHannahStupa.jpg";
+// import Kbl from "../../assets/kbl.jpg";
 
 function DWStupas() {
   return (
     <div className={classes.container}>
-      <div className={classes.insideContainer}>
+      {/* <div className={classes.insideContainer}>
         <h1 className={classes.titleText}>DIAMOND WAY STUPAS</h1>
         <div className={classes.imgBigHeroContainer}>
           <img
@@ -73,7 +73,7 @@ function DWStupas() {
           <a href="https://www.berchenling.org/8-stupas/">Karma Berchen Ling</a>
           .
         </p>
-      </div>
+      </div> */}
     </div>
   );
 }

@@ -8,12 +8,15 @@
   flex: 1 1 200px;
   margin: 0 15px;
 }
+
 .teacherBox:first-child {
   margin: 0 15px 0 0;
 }
+
 .teacherBox:last-child {
   margin-left: 0 0 0 15px;
 }
+
 .teacherName {
   font-weight: 600;
   font-size: 18px;
@@ -21,7 +24,8 @@
   margin: 0.375rem 0;
   color: rgb(48, 48, 48);
 }
-.teacherText {
+
+.teacherText p {
   font-weight: 300;
   font-size: 16px;
   line-height: 1.6;
@@ -29,6 +33,10 @@
 
 @media only screen and (max-width: 538px) {
   .teacherBox {
+    margin: 0;
+  }
+
+  .teacherBox:first-child {
     margin: 0;
   }
 }

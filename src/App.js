@@ -1,11 +1,12 @@
-import React from 'react'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import Home from './Home'
-import ScrollToTop from './ScrollToTop'
-import Details from './Details'
+import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Home from "./Home";
+import ScrollToTop from "./ScrollToTop";
+import Details from "./Details";
 
 function App() {
   return (
+    // <Router basename="/nrcstupa">
     <Router>
       <ScrollToTop />
       <Switch>
@@ -17,7 +18,7 @@ function App() {
         </Route>
       </Switch>
     </Router>
-  )
+  );
 }
 
-export default App
+export default App;

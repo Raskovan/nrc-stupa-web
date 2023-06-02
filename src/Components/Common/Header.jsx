@@ -1,49 +1,45 @@
-import React from 'react'
-import logo from '../../assets/dwb-logo-trnsp.png'
-import classes from '../../styles/Header.module.css'
+import React from "react";
+import logo from "../../assets/dwb-logo-trnsp.png";
+import classes from "../../styles/Header.module.css";
+import Menu from "./Menu";
 
 function Header(props) {
-  const [headerScrolled, setHeaderScrolled] = React.useState(false)
-  const { backgroundWhite } = props
+  const [headerScrolled, setHeaderScrolled] = React.useState(false);
+  const { backgroundWhite } = props;
 
   const listenScrollEvent = e => {
     if (window.scrollY > window.innerHeight - 80) {
-      setHeaderScrolled(true)
+      setHeaderScrolled(true);
     } else {
-      setHeaderScrolled(false)
+      setHeaderScrolled(false);
     }
-  }
+  };
 
   React.useEffect(() => {
-    window.addEventListener('scroll', listenScrollEvent)
+    window.addEventListener("scroll", listenScrollEvent);
     return () => {
-      window.removeEventListener('scroll', listenScrollEvent)
-    }
-  }, [])
+      window.removeEventListener("scroll", listenScrollEvent);
+    };
+  }, []);
 
   return (
-    <div
-      className={
-        headerScrolled || backgroundWhite
-          ? classes.header_container_white
-          : classes.header_container
-      }
-    >
+    <div className={headerScrolled || backgroundWhite ? classes.header_container_white : classes.header_container}>
       <header className={classes.content_container}>
         <div className={classes.leftBorder} />
         <div className={classes.rightBorder} />
         <div
           style={{
-            marginLeft: 'auto',
+            marginLeft: "auto",
             background: `url(${logo}) no-repeat left top / 235px 47px`,
-            width: '235px',
-            position: 'relative',
-            top: '20px'
+            width: "235px",
+            position: "relative",
+            top: "20px"
           }}
         />
       </header>
+      <Menu />
     </div>
-  )
+  );
 }
 
-export default Header
+export default Header;

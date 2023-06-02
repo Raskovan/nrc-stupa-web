@@ -6,6 +6,7 @@ import Details from "./Details";
 
 function App() {
   return (
+    // <Router basename="/nrcstupa">
     <Router>
       <ScrollToTop />
       <Switch>

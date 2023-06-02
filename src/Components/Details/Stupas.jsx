@@ -14,6 +14,7 @@ const renderOptions = {
           // height={node.data.target.fields.file.details.image.height}
           width="100%"
           alt={node.data.target.fields.description}
+          classes={{ marginBottom: ".8em" }}
         />
       );
     }

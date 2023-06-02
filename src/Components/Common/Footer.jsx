@@ -1,6 +1,6 @@
 import React from "react";
 import classes from "../../styles/Footer.module.css";
-import LogoNRC from "../../assets/NRCStupa_Logo_RED_BLACK.svg";
+import LogoNRC from "../../assets/NRCStupa_Logo_RGB_2Colors.svg";
 
 function Footer(props) {
   const { marginTop = false } = props;
@@ -21,15 +21,28 @@ function Footer(props) {
       }}
     >
       <div style={{ flexGrow: 1 }}>
-        <img src={LogoNRC} width="100%" alt="NRC Logo" className={classes.logo} />
-        <p className={classes.caption}>
-          NORTHEAST RETREAT CENTER <br />
-          1026 East Hill Road, Middleburgh, NY 12122
-          <br /> <a href="mailto:nrc@diamondway.org">nrc@diamondway.org</a>
-        </p>
+        <div style={{ display: "flex" }}>
+          <div>
+            <img src={LogoNRC} width="100%" alt="NRC Logo" className={classes.logo} />
+          </div>
+          <div>
+            <p className={classes.caption}>
+              NORTHEAST RETREAT CENTER <br />
+              1026 East Hill Road, Middleburgh, NY 12122
+              <br /> <a href="mailto:nrc@diamondway.org">nrc@diamondway.org</a>
+            </p>
+            <p className={classes.caption}>
+              SUPPORT THE PROJECT <br />
+              <a href="https://pay.diamondway.org/stupa/donate/new" target="_new">
+                Make a one-time donation
+              </a>
+            </p>
+          </div>
+        </div>
+
         <p className={classes.caption}>© {currentYear()} Diamond Way Buddhist Centers USA</p>
         <p className={classes.caption}>
-          DWB-NRC is part of <a href="https://diamondway.org/">DWB-USA</a>, a volunteer 501(c)3 non-profit organization
+          DWB-NRC is part of <a href="https://diamondway.org/">DWB USA</a>, a volunteer 501(c)3 non-profit organization
         </p>
       </div>
       <div style={{ flex: "0 0 43%", marginBottom: "2rem" }}>

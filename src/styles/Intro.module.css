@@ -14,6 +14,10 @@
   padding: 3vmin 8vmin 0;
 }
 
+.introTextContainerNoImage {
+  padding: 0 8vmin;
+}
+
 
 
 .titleText {
@@ -23,6 +27,15 @@
   font-size: 26px;
   color: #d22238;
   line-height: 1;
+}
+
+h2 {
+  margin-bottom: 15px;
+  font-weight: 500;
+  font-size: 26px;
+  color: #d22238;
+  line-height: 1;
+  text-transform: uppercase;
 }
 
 .headImage {

@@ -1,8 +1,9 @@
 .pics_in_a_row {
   display: flex;
+  margin-bottom: .8em;
 }
 
-.pics_in_a_row > div:not(:last-child) {
+.pics_in_a_row>div:not(:last-child) {
   margin-right: 2%;
 }
 

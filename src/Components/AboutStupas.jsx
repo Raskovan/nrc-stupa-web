@@ -23,15 +23,15 @@ const renderOptions = {
 
 function AboutStupas({ data }) {
   if (!Object.keys(data).length) return null;
-  const imageUrl = "https://" + data?.images[0]?.fields?.file?.url;
-  console.log(data.introText);
+  // const imageUrl = "https://" + data?.images[0]?.fields?.file?.url;
+
   return (
     <div className={classes.container}>
-      <p className={classes.titleText}>{data.title}</p>
-      <div className={classes.headImage}>
+      <p className={classes.titleText}>{data.title?.toUpperCase()}</p>
+      {/* <div className={classes.headImage}>
         <img src={imageUrl} className={classes.titleImg} width="100%" alt={data?.images[0]?.fields?.title} />
-      </div>
-      <div className={classes.introTextContainer}>{documentToReactComponents(data.introText, renderOptions)}</div>
+      </div> */}
+      <div className={classes.introTextContainerNoImage}>{documentToReactComponents(data.introText, renderOptions)}</div>
     </div>
   );
 }

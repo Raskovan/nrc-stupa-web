@@ -7,7 +7,7 @@ function AboutNRC({ data }) {
   const imageUrl = "https://" + data?.images[0]?.fields?.file?.url;
   return (
     <div className={classes.container}>
-      <p className={classes.titleText}>{data.title}</p>
+      <p className={classes.titleText}>{data.title?.toUpperCase()}</p>
       <div className={classes.headImage}>
         <img src={imageUrl} width="100%" alt={data?.images[0]?.fields?.title} className={classes.titleImg} />
       </div>

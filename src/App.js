@@ -6,11 +6,11 @@ import Details from "./Details";
 
 function App() {
   return (
-    // <Router basename="/nrcstupa">
-    <Router>
+    <Router basename="/nrcstupa">
+      {/* <Router> */}
       <ScrollToTop />
       <Switch>
-        <Route path="/" exact>
+        <Route path={`/`} exact>
           <Home />
         </Route>
         <Route path="*">

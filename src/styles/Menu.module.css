@@ -5,7 +5,8 @@
   position: fixed;
   z-index: 100;
   margin: 0 8vmin;
-  width: 10%;
+  width: 22%;
+  min-width: 300px
 }
 
 .textContainer {

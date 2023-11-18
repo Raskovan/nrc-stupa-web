@@ -29,7 +29,7 @@ function Footer(props) {
             <p className={classes.caption}>
               NORTHEAST RETREAT CENTER <br />
               1026 East Hill Road, Middleburgh, NY 12122
-              <br /> <a href="mailto:nrc@diamondway.org">nrc@diamondway.org</a>
+              <br /> <a href="mailto:nrcstupa@diamondway.org">nrcstupa@diamondway.org</a>
             </p>
             <p className={classes.caption}>
               SUPPORT THE PROJECT <br />
